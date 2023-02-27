@@ -7,7 +7,7 @@ package guia_6;
 
 import java.util.Scanner;
 
-public class ej8_guia6 {
+public class ej8 {
 
     /**
      * @param args the command line arguments

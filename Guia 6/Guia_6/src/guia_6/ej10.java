@@ -7,7 +7,7 @@ package guia_6;
 
 import java.util.Scanner;
 
-public class ej10_guia6 {
+public class ej10 {
 
     public static void main(String[] args) {    
        

@@ -24,14 +24,14 @@ public class ej5 {
     }
     
     public static void mostrarDoble(double num){
-        System.out.println("El doble del numero ingresado es: " + num*num);
+        System.out.println("El doble del numero ingresado es: " + num*2);
     }
     
     public static void mostrarTriple(double num){
-        System.out.println("El triple del numero ingresado es: " + num*num*num);
+        System.out.println("El triple del numero ingresado es: " + num*3);
     }
         
     public static void mostrarRaizCuadrada(double num){
-        System.out.println("La raiz cuadrada del numero ingresado es: " + sqrt(double num));
+        System.out.println("La raiz cuadrada del numero ingresado es: " + Math.sqrt(num));
     }
 }

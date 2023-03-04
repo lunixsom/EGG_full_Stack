@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class ej11 {
     public static void main(String[] args){
         int num1, num2, opcion;
+        double divic;
         
         Scanner leer = new Scanner(System.in);
         
@@ -22,26 +23,32 @@ public class ej11 {
             num2=leer.nextInt();
         }while(num1<0 || num2<0);
         
+        System.out.println(" ");
+        
         mostrarMenu();
         
+        System.out.println(" ");
+        
         do{
-            System.out.println("Elija una opcion: ");
             opcion = leer.nextInt();
+            
+            System.out.println(" ");
+            
             switch(opcion){
                 case 1:
-                    sumar(num1,num2);
+                    mostrarResultado(sumar(num1, num2));
                     mostrarMenu();
                     break;
                 case 2:
-                    restar(num1,num2);
+                    mostrarResultado(restar(num1, num2));
                     mostrarMenu();
                     break;
                 case 3:
-                    multiplicar(num1,num2);
+                    mostrarResultado(multiplicar(num1, num2));
                     mostrarMenu();
                     break;
                 case 4:
-                    dividir(num1,num2);
+                    mostrarResultado(dividir(num1, num2));
                     mostrarMenu();
                     break;
                 default:
@@ -57,19 +64,26 @@ public class ej11 {
         System.out.println("3. MULTIPLICAR");
         System.out.println("4. DIVIDIR");
         System.out.println("5. SALIR");
-        System.out.println("Elija opción: ");
+        System.out.print("Elija opción: ");
     }
     
-    public static void sumar(int num1, int num2){
-        System.out.println("La suma es: " + (num1 + num2));
+    public static void mostrarResultado(double resultado){
+        System.out.println("La resultado es: " + resultado);
+        System.out.println(" ");
     }
-    public static void restar(int num1, int num2){
-        System.out.println("La resta es: " + (num1 - num2));
+    
+    public static int sumar(int num1,int num2){
+        return (num1 + num2);
     }
-    public static void multiplicar(int num1, int num2){
-        System.out.println("La multiplicacion es: " + num1 * num2);
+    
+    public static int restar(int num1, int num2){
+        return (num1 - num2);
     }
-    public static void dividir(int num1, int num2){
-        System.out.println("La division es: " + num1 / num2);
+    public static int multiplicar(int num1, int num2){
+        return (num1 * num2);
+    }
+    public static double dividir(int num1, int num2){
+        double divi = ((num1*1.0) / num2); 
+        return divi;
     }
 }

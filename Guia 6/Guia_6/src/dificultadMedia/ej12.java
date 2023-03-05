@@ -11,6 +11,8 @@ public class ej12 {
     public static void main(String[] args){
         String frase, primerLetra, ultimaLetra;
         int longFrase;
+        int contadorIncorrectas = 0;
+        int contadorCorrectas = 0;
         
         Scanner leer = new Scanner (System.in);
         
@@ -24,9 +26,16 @@ public class ej12 {
             longFrase = frase.length();
             primerLetra = frase.substring(0, 1);
             ultimaLetra = frase.substring(longFrase - 1, longFrase);
-            System.out.println(primerLetra);
-            System.out.println(ultimaLetra);
-        }while(!(longFrase<6) || !(primerLetra.equals("X")) || !(ultimaLetra.equals("O")));
-        System.out.println("saliste del bucle");
+            //System.out.println(primerLetra);
+            //System.out.println(ultimaLetra);
+            if ((longFrase<6) || (primerLetra.equals("X")) || (ultimaLetra.equals("O"))){
+                contadorCorrectas++;
+            } else {
+                contadorIncorrectas++;
+            }
+        }while(!(frase.equals("&&&&&")));
+        
+        System.out.println("palabras correctas: " + contadorCorrectas);
+        System.out.println("palabras incorrectas: " + contadorIncorrectas);
     }
 }

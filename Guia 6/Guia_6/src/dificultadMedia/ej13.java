@@ -16,15 +16,23 @@ public class ej13 {
         cant = leer.nextInt();
         
         for (int i = 0; i < cant; i++) {
+                if(i == 0 || i == (cant-1)){
+            for (int j = 0; j < cant; j++) {
+                    System.out.print("*");                
+                    } 
+                } else{
+           for (int x = 0; x < cant-2 ; x++) {
             System.out.print("*");
-            if (i == 0 || i == cant){
-                for (int j = 0; j < (cant - 1); j++) {
-                    System.out.println("*");
-                }
+            for (int j = 0; j < cant-2; j++) {
+                System.out.print(" ");
             }
-            /*for (int j = 0; j < cant; j++) {
-                System.out.print("*");
-            } */               
+            System.out.println("*");
+        }
+                }   
+            System.out.println("");
+            }
+        
+
         }
     }
-}
+

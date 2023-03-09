@@ -1,0 +1,67 @@
+public void menuOpciones(Cadena c1) {
+        int opc;
+        String conf = "n";
+
+        do {
+
+            System.out.println("MENU:");
+            System.out.println("1. Llenar Cadena: ");
+            System.out.println("2. Mostrar vocales");
+            System.out.println("3. Invertir Frase");
+            System.out.println("4. Veces repetido");
+            System.out.println("5. Comparar longitud");
+            System.out.println("6.Unir frase ");
+            System.out.println("7. Reemplazar");
+            System.out.println("8. Contiene ");
+            System.out.println("9. Salir...");
+            opc = leer.nextInt();
+
+            if (opc == 9) {
+
+                do {
+                    System.out.println("Esta seguro que quiere salir? s/n");
+                    conf = leer.next();
+                } while (!conf.equalsIgnoreCase("n") && !conf.equalsIgnoreCase("s"));
+                if (conf.equalsIgnoreCase("s")) {
+                    break;
+                }
+
+            }
+
+            if (opc > 0 && opc < 10) {
+
+                switch (opc) {
+                    
+                    case 1:
+                        llenarCadena(c1);
+                        break;
+                    case 2:
+                        mostrarVocales(c1);
+                        break;
+                    case 3:
+                        invertirFrase(c1);
+                        break;
+                    case 4:
+                        vecesRepetido(c1);
+                        break;
+                    case 5:
+                        compararLongitud(c1);
+                        break;
+                    case 6:
+                        unirFrase(c1);
+                        break;
+                    case 7:
+                        reemplazar(c1);
+                        break;
+                    case 8:
+                        contiene(c1);
+                        break;
+                }
+
+            }
+
+        } while (conf.equalsIgnoreCase("n"));
+        
+        System.out.println("EL PROGRAMA HA TERMINADO.....");
+
+    }

@@ -1,0 +1,145 @@
+MAIN:
+public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        
+        Cadena fr = new Cadena();
+        servCadena serv = new servCadena();
+        System.out.print("Ingrese una frase: ");
+        fr.setFrase(leer.nextLine());
+        
+        // SERVICIOS
+        serv.mostrarVocales(fr);
+        serv.invertirFrase(fr);
+        serv.vecesRepetido(fr);
+        serv.compararLongitud(fr);
+        serv.unirFrases(fr);
+        serv.reemplazar(fr);
+        
+    }
+    
+}
+ENTIDADES:
+ private String frase;
+    private int tamanio;
+
+    public Cadena(String frase, int tamanio) {
+        this.frase = frase;
+        this.tamanio = tamanio;
+    }
+
+    public Cadena() {
+    }
+
+    public String getFrase() {
+        return frase;
+    }
+
+    public void setFrase(String frase) {
+        this.frase = frase;
+    }
+
+    public int getTamanio() {
+        return tamanio = frase.length();
+    }
+
+    public void setTamanio(int tamanio) {
+        this.tamanio = tamanio ;
+    }
+    
+    
+}
+SERVICIOS:
+Scanner leer = new Scanner(System.in).useDelimiter("\n");
+    Cadena fr = new Cadena();
+    
+    public void mostrarVocales(Cadena fr){
+        System.out.println("MOSTRAR VOCALES:");
+        char letra;
+        int cont=0;
+        for (int i = 0; i < fr.getTamanio() ; i++) {
+            letra = fr.getFrase().charAt(i);
+            if(letra=='a' || letra=='e' || letra=='i' || letra=='o' || letra=='u'){
+                cont++;
+            }
+        }
+        System.out.println("La frase ingresada tiene: " +cont+ " vocales en total.");
+    }
+
+    public void invertirFrase(Cadena fr){
+        char letra;
+        String newFr="";
+        for (int i = fr.getTamanio() -1 ; i >= 0 ; i--) {
+            letra = fr.getFrase().charAt(i);
+            newFr = newFr.concat(String.valueOf(letra));
+        }       
+        System.out.println("La frase invertida:\n" + newFr);
+    }
+    
+    public void vecesRepetido(Cadena fr) {
+        System.out.println("VECES REPETIDO:");
+        char letra;
+        int cont=0;
+        System.out.print("Ingrese la letra que desea buscar: ");
+        char lt = leer.next().charAt(0);
+        for (int i = 0; i < fr.getTamanio() ; i++) {
+            letra = fr.getFrase().charAt(i);
+            if (letra == lt){
+                cont++;
+            }
+        }
+        System.out.println("La letra '" +lt+ "' se encuentra " +cont+ " veces en la frase.");
+    }
+    
+    public void compararLongitud(Cadena fr){
+        String newFr;
+        int tam;
+        System.out.print("Ingrese la nueva frase: ");
+        newFr = leer.next();
+        tam = newFr.length();
+        if (tam == fr.getTamanio()){
+            System.out.println("Las frases tienen la misma cantidad de caracteres.");
+        } else if (tam < fr.getTamanio()){
+            System.out.println("La frase ingresada es menor a la frase anterior.");
+        } else {
+            System.out.println("La frase ingresada es mayor a la frase anterior.");
+        }
+    }
+    
+    public void unirFrases(Cadena fr){
+        String newFr, frConcat;
+        System.out.println("UNIR FRASES:");
+        System.out.print("Ingrese la nueva frase que quiere unir: ");
+        newFr = leer.next();
+        frConcat = fr.getFrase().concat(newFr);
+        System.out.println("La frase unida es: \n" +frConcat);
+    }
+    
+    public void reemplazar(Cadena fr) {
+        System.out.println("REEMPLAZAR:");
+        char letra, lt;
+        String newFr = "";
+        System.out.print("Ingrese la letra por la quiere reemplazar la 'a': ");
+        letra = leer.next().charAt(0);
+        for (int i = 0; i < fr.getTamanio(); i++) {
+            lt = fr.getFrase().charAt(i);
+            if (lt == 'a') {
+                lt = letra;
+            }
+            newFr = newFr.concat(String.valueOf(lt));
+        }
+        System.out.println("La nueva frase es: \n" +newFr);
+    }
+    
+    public void contiene(Cadena fr){
+        boolean letra = false;
+        char lt, let;
+        System.out.println("CONTIENE LETRA:");
+        System.out.print("Ingrese la letra que desea buscar: ");
+        lt = leer.next().charAt(0);
+        for (int i = 0; i < fr.getTamanio(); i++) {
+            let = fr.getFrase().charAt(i);
+        }
+    }
+}
+

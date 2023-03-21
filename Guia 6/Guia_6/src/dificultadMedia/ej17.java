@@ -11,7 +11,7 @@ public class ej17 {
     public static void main(String[] args){        
         //int cant;
         int[] vect = {1,123,55643,42,7};
-        
+        String[] vectString;
         Scanner leer = new Scanner(System.in);
         
 //        System.out.print("Ingresa tamaño del vector: ");
@@ -19,9 +19,13 @@ public class ej17 {
         
         //vect = llenarConAleatorios(cant);
         
-        mostrarVect(vect);
+        //mostrarVect(vect);
         
-        contaPorDigitosHastaCinco(vect);
+        vectString = convertirAStrings(vect);
+        
+        mostrarVectS(vectString);
+        
+        //contaPorDigitosHastaCinco(vect);
         
     }
     
@@ -35,11 +39,29 @@ public class ej17 {
 //        return vect;
 //    }
     
-        public static void mostrarVect(int[] vect){
+//        public static void mostrarVect(int[] vect){
+//            for (int i = 0; i < vect.length; i++) {
+//            System.out.print("[" + vect[i] + "]");
+//        }
+//    }
+    
+        public static void mostrarVectS(String[] vect){
         for (int i = 0; i < vect.length; i++) {
             System.out.print("[" + vect[i] + "]");
         }
     }
+        
+        public static String[] convertirAStrings(int[] vect){
+            String[] vectorStrings = {};
+            
+            for (int i = 0; i < vect.length; i++) {
+               vectorStrings[i] = String.valueOf(vect[i]);
+                
+            }
+            
+            return vectorStrings;
+        }
+                
         
         public static void contaPorDigitosHastaCinco(String[] vect){
             

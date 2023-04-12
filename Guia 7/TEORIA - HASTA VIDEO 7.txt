@@ -1,0 +1,8 @@
+HASTA VIDEO 7:
+
+Crear CLASE
+CONSTRUCTOR - tipos implicitos y explicitos
+ENCAPSULAMIENTO - Set
+ENCAPSULAMIENTO - Get
+ENCAPSULAMIENTO - toString
+ENCAPSULAMIENTO - Metodos / sobrecarga de Metodos 

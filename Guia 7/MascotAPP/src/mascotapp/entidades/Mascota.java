@@ -23,7 +23,7 @@ public class Mascota {
         this.nombre = nombre;
         this.apodo = apodo;
         this.tipo = tipo;
-        energia = 1000;
+        energia = 1000; 
     }
 
     public Mascota(String nombre, String apodo, String tipo, String color, String raza, int edad, boolean cola) {

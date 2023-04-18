@@ -1,0 +1,11 @@
+
+Crear CLASE
+CONSTRUCTOR - tipos implicitos y explicitos
+ENCAPSULAMIENTO - Set
+ENCAPSULAMIENTO - Get
+ENCAPSULAMIENTO - toString
+ENCAPSULAMIENTO - Metodos / sobrecarga de Metodos
+ENCAPSULAMIENTO - visibilidad & clase de SERVICIO
+Metodos y Atributos ESTATICOS
+
+ 

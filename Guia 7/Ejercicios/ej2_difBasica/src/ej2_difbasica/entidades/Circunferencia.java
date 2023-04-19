@@ -22,6 +22,21 @@ public class Circunferencia {
         this.radio = radio;
     }
     
+    // d)
     
+    public Double area(){
+       
+        Double area = ((radio*radio)*Math.PI);
+        
+        return area;
+    }
     
-}
+    // e)
+    
+    public Double perimetro(){
+    
+        Double perimetro = 2*radio*Math.PI;
+        
+        return perimetro;
+    }
+}   

@@ -19,11 +19,13 @@ public class ServicioCuenta {
       return new Cuenta(numeroCuenta,dni,saldoActual);  
     }
     
-    public void ingresar(Cuenta objeto){
+    public void extraccionRapida(Cuenta objeto){
+        int monto;
+        do{
+            System.out.print("Ingrese monto menor al 20%: ");
+            monto = leer.nextInt();
+        }while(monto>(objeto.getSaldoActual()*.2));
         
-        System.out.println("Ingresar monto a depositar: ");
-        double monto = leer.nextDouble();
-        
-        objeto.aumentarSaldoActual(monto);
-    }
+        objeto.retirar(monto);
+    }                
 }

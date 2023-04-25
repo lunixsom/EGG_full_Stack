@@ -60,5 +60,20 @@ public class Persona {
         this.altura = altura;
     }
     
+    public int calcularIMC(){
+        double imc = peso/(altura*altura);
+            
+        if(imc<20){
+            return -1;
+        }if((imc>=20) && (imc<=25)){
+            return 0;
+        }
+        
+        return 1;
+    }
+    
+    public boolean esMayorDeEdad(){
+        return edad>18;
+    }
     
 }
